@@ -1,0 +1,55 @@
+<div *ngIf="searchedResult" [style.background-image]="'url(' + posterUrl+searchedResult.poster_path + ')'" class="detail-main">
+  <div class="movie-content">
+    <div class="container">
+      <h2>{{searchedResult.title}}</h2>
+      <div class="overview">
+
+        <p class="homePage">
+          <label>Homepage:</label>
+          <a href="{{searchedResult.homepage}}">{{searchedResult.title}}</a>
+        </p>
+
+        <p class="credits">
+          <label>Cast:</label>
+          <ng-container *ngFor="let actor of searchedResult.credits.cast.slice(0,5)">
+            <span class="actor commaSeperated">{{actor.name}}</span>
+          </ng-container>
+        </p>
+
+        <p class="overview">
+          <label>Plot:</label>
+          {{searchedResult.overview}}
+        </p>
+
+
+        <p class="releaseDate">
+          <label>Release date:</label>
+          {{searchedResult.release_date | date }}
+        </p>
+
+        <p class="rating">
+          <label>Imdb rating:</label>
+          {{searchedResult.vote_average}}
+        </p>
+
+        <p class="genre">
+          <label>Genre: </label>
+          <ng-container *ngFor="let genre of searchedResult.genres">
+            <span class="commaSeperated">{{genre.name}}</span>
+        </ng-container>
+        </p>
+
+        <p class="runtime">
+          <label>Runtime:</label>
+          {{searchedResult.runtime}} min
+        </p>
+
+
+
+      </div>
+      <button class="backButton" (click)="goBack()">Back</button>
+     <a [routerLink] = "['/similar', searchedResult.id, {movie:searchedResult.title}]"><button class="similarMovies">Get Similar movies</button></a>
+    </div>
+  </div>
+
+</div>

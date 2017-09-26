@@ -1,0 +1,13 @@
+
+.body1{
+  background: no-repeat center fixed;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  top:0;
+  width: 100%;
+
+}
+
+

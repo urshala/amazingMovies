@@ -1,0 +1,47 @@
+html,body{
+  margin:0;
+  padding:0;
+}
+
+
+nav{
+  width: 100%;
+  background-image: linear-gradient(to right, #183d51 50%, #112b39, #0c1f29);
+  z-index: 20;
+}
+
+.left-menu{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin:0;
+}
+
+.right-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+app-search{
+  width: 100%;
+}
+.menu-item{
+  padding: 25px 15px;
+  list-style-type: none;
+  font-size: 1.1em;
+}
+
+nav li:hover{
+  background-color: #0c1f29;
+}
+
+nav li a{
+  color: #c8c8c8;
+  text-decoration: none;
+  padding: 25px;
+
+}
+
+
+
+

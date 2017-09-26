@@ -1,0 +1,26 @@
+.detail-main{
+  background:  no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  z-index: -1;
+  width:100%;
+}
+
+.movie-content{
+margin-top: 20px;
+
+}
+.container {
+  background: slateblue;
+  margin: 30px auto;
+  width: 50%;
+  padding: 10px;
+  opacity: 0.9;
+  float: left;
+}
+
+.commaSeperated:not(:last-child)::after{
+  content: ',';
+}

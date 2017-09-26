@@ -1,0 +1,13 @@
+
+<div class="container" [style.background-image]="'url(' + background + ')'">
+  <label>Search :</label>
+  <input type="text" #movieSearch id="movie-search" (keyup)="search(movieSearch.value)">
+  <div class="results">
+    <ul>
+      <li class="result" *ngFor="let res of results | async " (click)="goToDetail(res.id)">
+        {{res.title}}
+      </li>
+    </ul>
+  </div>
+
+</div>

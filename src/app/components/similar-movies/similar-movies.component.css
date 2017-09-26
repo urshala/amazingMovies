@@ -1,0 +1,67 @@
+
+h2{
+  color: #0c1f29;
+  margin-left: 20px;
+  padding:0;
+}
+.results{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+}
+
+.result{
+  cursor: pointer;
+  width: 25%;
+  height: 70vh;
+  padding-bottom: 10px;
+  background-color: #f7c8b2;
+  position: relative;
+}
+
+.result:hover .overlay{
+  bottom:0;
+  height: 100%;
+}
+
+.result:hover .posterImage{
+  opacity:0.5;
+}
+
+
+.posterImage{
+  /*max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin:0 auto;*/
+  /* Or else below to make image fit in a div */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.overlay{
+  position: absolute;
+  left:0;
+  margin:0 auto;
+  text-align: center;
+  width:70%;
+  overflow: hidden;
+  transition: .5s;
+  height: 0%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
+.blockIt{
+  display: block;
+}
+
+.overview{
+  word-wrap: break-word;
+}
