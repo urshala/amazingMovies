@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import {Observable} from "rxjs/Observable";
 
 
-const apiKey: string = 'e22405fabf959948112ced6cd8b7fec9';
+const apiKey: string = 'your_api_key';
 const url: string = 'https://api.themoviedb.org/3/search/movie?api_key=' + apiKey;
 const imageUrl: string= 'https://image.tmdb.org/t/p/w780';
 const upComingMoviesUrl:string = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US`;
